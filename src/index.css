@@ -1,0 +1,51 @@
+/* BONUS FEATURE: Multiple themes to put the user in control of their site experience */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- THEME DEFINITIONS --- */
+
+.discord-blue {
+  --color-background: #111827;
+  --color-foreground: #D1D5DB;
+  --color-primary: #3B82F6;
+  --color-secondary: #1F2937;
+  --color-accent: #3B82F6;
+  --color-accent-foreground: #FFFFFF;
+  --color-muted: #374151;
+}
+
+.vintage-brown {
+  --color-background: #3d2c22;
+  --color-foreground: #d4c4b7;
+  --color-primary: #a16207;
+  --color-secondary: #574236;
+  --color-accent: #f59e0b;
+  --color-accent-foreground: #FFFFFF;
+  --color-muted: #785a49;
+}
+
+.fairytale-pink {
+  --color-background: #4a044e;
+  --color-foreground: #fbcfe8;
+  --color-primary: #db2777;
+  --color-secondary: #701a75;
+  --color-accent: #f472b6;
+  --color-accent-foreground: #FFFFFF;
+  --color-muted: #9d174d;
+}
+
+.classic-dark {
+  --color-background: #313338;
+  --color-foreground: #dbdee1;
+  --color-primary: #5865F2;
+  --color-secondary: #2b2d31;
+  --color-accent: #5865F2;
+  --color-accent-foreground: #FFFFFF;
+  --color-muted: #404249;
+}
+
+body {
+  @apply bg-background text-foreground transition-colors duration-300;
+}
