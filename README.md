@@ -1,12 +1,12 @@
-**TalentFlow - A Mini Hiring Platform**
+# **TalentFlow - A Mini Hiring Platform**
 
 TalentFlow is a feature-rich, front-end application designed to simulate a modern hiring platform for HR teams. It provides a suite of tools to manage job postings, track candidates through the hiring pipeline, and build custom skill assessments. The entire application runs locally, using a mock API and browser-based storage to provide a complete, interactive experience without an actual backend.
 
-**User Features**
+## **User Features**
 
 The application is organized into three primary sections, each designed to streamline a core part of the recruitment workflow.
 
-**Jobs Page**
+### **Jobs Page**
 
 This page serves as the central hub for managing all job postings. I implemented a comprehensive set of features that allow a user to:
 
@@ -17,7 +17,7 @@ This page serves as the central hub for managing all job postings. I implemented
 - Reorder jobs via a smooth drag-and-drop interface, with changes reflected instantly through optimistic updates.
 - Click on any job to navigate to a "deep-linkable" detail page that displays its full description and tags.
 
-**Candidates Page**
+### **Candidates Page**
 
 This section is designed for efficient management of the entire candidate pool. Key functionalities I built include:
 
@@ -28,7 +28,7 @@ This section is designed for efficient management of the entire candidate pool. 
 - Deep-linkable candidate profile pages that display a full activity timeline, consisting of stage changes, notes, and completed assessments.
 - A note-taking feature on the profile page with support for @mentions, which are highlighted and suggest teammates from a local list.
 
-**Assessments Page**
+### **Assessments Page**
 
 This is a tool for creating and simulating job-specific quizzes. I implemented a two-pane interface where an HR manager can:
 
@@ -41,18 +41,18 @@ This is a tool for creating and simulating job-specific quizzes. I implemented a
 
 _Note:_ By default, the local database is seeded with 25 jobs, 1000 candidates and 5 assessments of 15 questions each (assigned to first 5 active jobs).
 
-**Technical**
+## **Technical**
 
-**Setup and Installation**
+### **Setup and Installation**
 
 To get this project running on your local machine, please follow these steps.
 
-Prerequisites:
+**Prerequisites**:
 
 - [Node.js](https://nodejs.org/) (v18 or later is recommended)
 - [npm](https://www.npmjs.com/) (which comes with Node.js)
 
-Manual Setup Steps:
+**Manual Setup Steps**:
 
 1. Open your terminal and clone this repository to your local machine:
 
@@ -72,7 +72,7 @@ Manual Setup Steps:
 
 5. The terminal will display a local URL (usually <http://localhost:5173>). Open this URL in your web browser to see the application running. The first time you run the app, the database will be automatically seeded with sample data, which may take a few moments.
 
-**Developer Tools**
+### **Developer Tools**
 
 I chose a modern toolset to build this application, focusing on developer experience, performance, and maintainability. It comprises:
 
@@ -89,7 +89,7 @@ I chose a modern toolset to build this application, focusing on developer experi
 - **React Hot Toast:** For providing clean, non-intrusive feedback to the user for events like API errors or successful form submissions.
 - **Lucide React:** For all icons throughout the application, providing a clean and consistent visual language.
 
-**Basic Workflow**
+### **Basic Workflow**
 
 I have designed the application's technical flows based on my current knowledge of modern best practices.
 
@@ -99,7 +99,7 @@ I have designed the application's technical flows based on my current knowledge 
 - **Persistent Filters:** To ensure a user never loses their context, all filter states on the Jobs and Candidates pages are stored in the URL using the useSearchParams hook. This is the single source of truth, making the filtered views shareable and persistent across navigation.
 - **Large List Performance:** To handle the list of 1000+ candidates without crashing the browser, I used @tanstack/react-virtual. It cleverly renders only the handful of DOM nodes that are currently visible in the scrollable area, recycling them as the user scrolls.
 
-**Project Structure**
+### **Project Structure**
 
 The "src" folder contains all the major project files and corresponds to the logical structure of the project. It consists of the following sub-directories:
 
@@ -110,7 +110,7 @@ The "src" folder contains all the major project files and corresponds to the log
 - **mocks**: Contains all the logic for our mock API server, powered by MSW. The _handlers.js_ file defines the API routes and their behavior.
 - **pages**: Contains the main components for each route in the application (e.g., _JobsPage.jsx, CandidatesPage.jsx_). These components are responsible for fetching page-specific data and arranging the layout of smaller components.
 
-**Technical Challenges**
+### **Technical Challenges**
 
 Throughout this project, I encountered several challenging bugs that required debugging and refining the code architecture:
 
@@ -119,7 +119,7 @@ Throughout this project, I encountered several challenging bugs that required de
 - **Theme Swapping Bug:** The theme switcher was consistently applying the wrong colors for two specific themes. I initially suspected a state management issue, but after proving the React logic was correct via a diagnostic test, I identified the root cause as a CSS specificity conflict in _index.css_. My initial use of the _:root_ selector was overriding the theme classes. I fixed this by refactoring the CSS to use fully isolated, independent class names for each theme, which removed the conflicts.
 - **Filter State Persistence:** Initially, all applied filters (e.g. "Active" jobs with "Remote" tag) were stored in local component state (_useState_), which meant they were lost whenever the user navigated away from the page by clicking a deep link. I refactored this entire system to store the filter state in the URL's query parameters using the _useSearchParams_ hook, creating a more robust and user-friendly experience.
 
-**Bonus Features**
+### **Bonus Features**
 
 In addition to the core requirements, I have added a few bonus features that elevate the UI/UX and professional polish of the application.
 
