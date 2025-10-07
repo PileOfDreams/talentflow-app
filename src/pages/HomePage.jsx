@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { fetchSampleCandidates } from '../lib/api';
 import Spinner from '../components/Spinner';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import TalentFlowLogo from '../components/TalentFlowLogo';
 
 const AnimatedSection = ({ children }) => (
   <motion.div
@@ -21,19 +22,9 @@ const AnimatedSection = ({ children }) => (
   </motion.div>
 );
 
-// NOTE: The logo SVGs below use hardcoded colors by design.
+// NOTE: The HeadHunters logo SVG below uses hardcoded colors by design.
 // This is a stylistic choice to maintain a consistent brand identity across themes.
 // Also scalable, as we can just modify the SVG to create new logos
-const TalentFlowLogo = () => (
-    <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <rect width="100" height="100" rx="20" fill="#D2B48C" /> 
-        <g strokeWidth="9" fill="none" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 30 C 40 10, 60 50, 80 30" stroke="#60A5FA" />
-            <path d="M20 50 C 40 30, 60 70, 80 50" stroke="#3B82F6" />
-            <path d="M20 70 C 40 50, 60 90, 80 70" stroke="#1D4ED8" />
-        </g>
-    </svg>
-);
 const HeadHuntersLogo = () => (
     <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <g style={{ mixBlendMode: 'screen' }}>

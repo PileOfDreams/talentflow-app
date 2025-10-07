@@ -1,0 +1,14 @@
+import React from 'react';
+
+export default function TalentFlowLogo() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="20" fill="#D2B48C" />
+      <g strokeWidth="9" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 30 C 40 10, 60 50, 80 30" stroke="#60A5FA" />
+        <path d="M20 50 C 40 30, 60 70, 80 50" stroke="#3B82F6" />
+        <path d="M20 70 C 40 50, 60 90, 80 70" stroke="#1D4ED8" />
+      </g>
+    </svg>
+  );
+}
