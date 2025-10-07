@@ -56,7 +56,7 @@ To get this project running on your local machine, please follow these steps.
 
 1. Open your terminal and clone this repository to your local machine:
 
-   _git clone \[<https://github.com/YOUR_USERNAME/talentflow-app.git\>](<https://github.com/YOUR_USERNAME/talentflow-app.git>)_
+   _git clone <https://github.com/PileOfDreams/talentflow-app.git>_
 
 2. Navigate to the Project Directory:
 
